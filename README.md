@@ -1,34 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI-PLAYGROUND
 
-## Getting Started
+This is an immerse AI creative playground, with tailored prompts. Free free to try it out here: [Live Demo](https://nodejs.org/download/release/v18.15.0/) 
 
-First, run the development server:
+## Pre-requisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Node v18.15.0 (Can be downloaded [here](https://nodejs.org/download/release/v18.15.0/)). Download a `.pkg` file to install Node on MacOS.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How to Run
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Clone this repository, run `git clone https://github.com/Stanley-Okwii/ai-playground.git`
+- Run `npm install` to install project dependencies
+- Create the `.env.local` file in the root of the project, and copy over the variables from `template.env.local`. Add your `NEXT_PUBLIC_OPENAI_API_KEY` and `NEXT_PUBLIC_ORGANIZATION` values to the `.env.local`. These values can be got from
+- Run `npm run dev` to start the server
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Decisions and Why
 
-To learn more about Next.js, take a look at the following resources:
+- 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
