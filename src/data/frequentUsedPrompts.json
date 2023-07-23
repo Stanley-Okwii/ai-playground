@@ -1,0 +1,25 @@
+{
+    "prompts": [
+      {
+        "id": 1,
+        "text":   "Describe a serene beach scene at sunset."
+      },
+      {
+        "id": 2,
+        "text":   "Write a short story about a young wizard discovering their magical powers."
+      },
+      {
+        "id": 3,
+        "text":   "Generate a poem inspired by the beauty of nature."
+      },
+      {
+        "id": 4,
+        "text":  "Design a unique logo for a futuristic technology company."
+      },
+      {
+        "id": 5,
+        "text":  "Compose a creative recipe for a mouthwatering dessert."
+      }
+    ]
+  }
+  
