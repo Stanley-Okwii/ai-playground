@@ -1,6 +1,6 @@
 # AI-PLAYGROUND
 
-This is an immerse AI creative playground, with tailored prompts. Free free to try it out here: [Live Demo](https://ai-playground-wine.vercel.app) 
+This is an immerse AI creative playground, with tailored prompts. Free free to try out the [Live Demo](https://ai-playground-wine.vercel.app) 
 
 ## Pre-requisites
 
@@ -13,13 +13,14 @@ This is an immerse AI creative playground, with tailored prompts. Free free to t
 - Create the `.env.local` file in the root of the project, and copy over the variables from `template.env.local`. Add your `NEXT_PUBLIC_OPENAI_API_KEY` and `NEXT_PUBLIC_ORGANIZATION` values to the `.env.local`. These values can be got from https://platform.openai.com/account/api-keys
 - Run `npm run dev` to start the server
 
-
 ## Assumptions
-- Users are familiar with chatgpt model and its configuration
-- The Frequently used prompts is dynamically populated from the top 5 list of prompts used for that day.
+- Users possess familiarity with the ChatGPT model and its configuration..
+- The Frequently Used Prompts feature is dynamically populated, pulling the top 5 prompts from the daily usage data.
 
-## Decisions and Why
+## Decisions made and Why
 
-- I used a streaming API instead of usual Rest API that returns JSON data because * Lower memory usage: Because data is sent to the client in small chunks, there is no need to buffer the entire response in memory before sending it. This can lead to lower memory usage and better overall performance, particularly for large responses.And Faster response times: By sending data to the client as soon as it becomes available, streams can reduce the amount of time it takes to send a response back to the client. This can lead to faster response times and better user experiences.
-- 
-
+- Implemented a streaming API instead of a typical REST API that deliver JSON data, resulting in lower memory usage(on the backend server) and faster response times(as data becomes available its rendered, instead of waiting for huge JSON response).
+- Implemented a `try-catch` statement to handle errors that may occur when the API call fails, ensuring graceful error handling.
+- Utilized environment variables to safeguard sensitive information, such as API secrets, enhancing security.
+- Employed components to manage the rendering of specific UI elements, promoting code modularity and maintainability.
+- Defined Interfaces for each component's props, ensuring proper usage and type-checking of props throughout the application, thereby enhancing code reliability and preventing potential errors.

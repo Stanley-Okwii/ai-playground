@@ -1,6 +1,6 @@
-import { data } from "../data";
-
 import { useEffect, useState } from "react";
+
+import { data } from "../data";
 
 interface FrequentPromptProps {
   setInputValue: (value: string) => void;

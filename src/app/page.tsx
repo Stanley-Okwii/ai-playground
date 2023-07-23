@@ -34,8 +34,7 @@ export default function Home() {
             Authorization: `Bearer ${
               process.env.NEXT_PUBLIC_OPENAI_API_KEY || ""
             }`,
-            Organization: process.env.NEXT_PUBLIC_ORGANIZATION || "",
-            "Access-Control-Allow-Origin": "*",
+            Organization: process.env.NEXT_PUBLIC_ORGANIZATION || ""
           },
           body: JSON.stringify({
             model: modelVersion,
