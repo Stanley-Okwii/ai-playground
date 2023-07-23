@@ -34,7 +34,7 @@ export default function Home() {
             Authorization: `Bearer ${
               process.env.NEXT_PUBLIC_OPENAI_API_KEY || ""
             }`,
-            Organization: process.env.NEXT_PUBLIC_ORGANIZATION || ""
+            Organization: process.env.NEXT_PUBLIC_ORGANIZATION || "",
           },
           body: JSON.stringify({
             model: modelVersion,
@@ -93,42 +93,46 @@ export default function Home() {
   return (
     <main className="min-h-screen flex-col items-center justify-between p-24">
       <Header />
-      <div className="grid grid-cols-3 gap-3">
-        <div className="flex min-h-full flex-col px-6 lg:px-8">
-          <h4 className="text-2xl font-bold dark:text-white">
-            Frequently used prompts
-          </h4>
-          <FrequentPrompts {...{ setInputValue, sendRequest }} />
-        </div>
-        <div className="flex min-h-full flex-col px-6 lg:px-8">
-          <h4 className="text-2xl font-bold dark:text-white">AI Playground</h4>
-          <InputForm
-            {...{ isLoading, setInputValue, inputValue, sendRequest }}
-          />
-          {response && (
-            <>
-              <span>Response: </span>
-              <div className="mt-4 rounded-xl border bg-white p-4 shadow-md transition hover:bg-gray-100 text-gray-500">
-                {response}
-              </div>
-            </>
-          )}
-          <ErrorAlert {...{ error, setError }} />
-        </div>
-        <div className="flex min-h-full flex-col px-6 lg:px-8">
-          <h4 className="text-2xl font-bold dark:text-white">
-            Model Configurations
-          </h4>
-          <ModelConfiguration
-            {...{
-              modelVersion,
-              temperature,
-              maxTokenNumber,
-              setModelVersion,
-              setTemperature,
-              setMaxTokenNumber,
-            }}
-          />
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="flex min-h-full flex-col px-6 lg:px-8">
+            <h4 className="text-2xl font-bold dark:text-white">
+              Frequently used prompts
+            </h4>
+            <FrequentPrompts {...{ setInputValue, sendRequest }} />
+          </div>
+          <div className="flex min-h-full flex-col px-6 lg:px-8">
+            <h4 className="text-2xl font-bold dark:text-white">
+              AI Playground
+            </h4>
+            <InputForm
+              {...{ isLoading, setInputValue, inputValue, sendRequest }}
+            />
+            {response && (
+              <>
+                <span>Response: </span>
+                <div className="mt-4 rounded-xl border bg-white p-4 shadow-md transition hover:bg-gray-100 text-gray-500">
+                  {response}
+                </div>
+              </>
+            )}
+            <ErrorAlert {...{ error, setError }} />
+          </div>
+          <div className="flex min-h-full flex-col px-6 lg:px-8">
+            <h4 className="text-2xl font-bold dark:text-white">
+              Model Configurations
+            </h4>
+            <ModelConfiguration
+              {...{
+                modelVersion,
+                temperature,
+                maxTokenNumber,
+                setModelVersion,
+                setTemperature,
+                setMaxTokenNumber,
+              }}
+            />
+          </div>
         </div>
       </div>
     </main>
