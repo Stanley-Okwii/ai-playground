@@ -1,6 +1,6 @@
 export const Header = () => (
   <div className="sm:mx-auto sm:w-full pb-10">
-    <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+    <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-green-900">
       GENERATIVE AI PLAYGROUND
     </h2>
     <p className="font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">

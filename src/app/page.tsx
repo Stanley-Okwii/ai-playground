@@ -15,7 +15,7 @@ export default function Home() {
   const [error, setError] = useState<String>("");
   const [modelVersion, setModelVersion] = useState<String>("gpt-3.5-turbo");
   const [temperature, setTemperature] = useState<Number>(1);
-  const [maxTokenNumber, setMaxTokenNumber] = useState<Number>(200);
+  const [maxTokenNumber, setMaxTokenNumber] = useState<Number>(100);
   const [isLoading, setIsLoading] = useState<Boolean>(false);
   const [response, setResponse] = useState<String>("");
 
@@ -109,7 +109,7 @@ export default function Home() {
           {response && (
             <>
               <span>Response: </span>
-              <div className="mt-4 rounded-xl border bg-white p-4 shadow-md transition hover:bg-gray-100">
+              <div className="mt-4 rounded-xl border bg-white p-4 shadow-md transition hover:bg-gray-100 text-gray-500">
                 {response}
               </div>
             </>
