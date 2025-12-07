@@ -93,7 +93,7 @@ export default function Home() {
   return (
     <main className="min-h-screen flex-col items-center justify-between p-24">
       <Header />
-      <div className="container mx-auto">
+
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           <div className="flex min-h-full flex-col px-6 lg:px-8">
             <h4 className="text-2xl font-bold dark:text-white">
@@ -134,7 +134,6 @@ export default function Home() {
             />
           </div>
         </div>
-      </div>
     </main>
   );
 }
